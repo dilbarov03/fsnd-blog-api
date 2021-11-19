@@ -13,7 +13,7 @@ def create_app(test_config=False):
 
   @app.route("/")
   def index():
-    return "Hello World"
+    return "Welcome to Blog-API. Run https://blog03-api.herokuapp.com/posts to get posts"
 
   @app.route("/posts")
   def get_all_posts():

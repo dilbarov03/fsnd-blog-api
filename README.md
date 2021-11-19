@@ -4,7 +4,7 @@
 
 This is the simple blog API project. Everyone can get posts and users, but to create new posts - authorization and permissions are needed.
 
-https://fsnd-family-tree.herokuapp.com
+https://blog03-api.herokuapp.com
 
 ## API
 
@@ -18,7 +18,7 @@ Retrieves all posts
 
 ```
 curl -X GET \
-  http://0.0.0.0:8080/posts'
+  https://blog03-api.herokuapp.com/posts'
 ```
 
 Sample response:
@@ -37,7 +37,7 @@ Retrieves a specific post by id
 
 ```
 curl -X GET \
-  http://0.0.0.0:8080/posts/1
+  https://blog03-api.herokuapp.com/posts/1
 ```
 
 Sample response:
@@ -54,7 +54,7 @@ Retrieves all existing users
 
 ```
 curl -X GET \
-  http://0.0.0.0:8080/users'
+  https://blog03-api.herokuapp.com/users'
 ```
 
 Sample response:
@@ -75,7 +75,7 @@ Retrieves posts of specific users
 
 ```
 curl -X GET \
-  http://0.0.0.0:8080/users/2
+  https://blog03-api.herokuapp.com/users/1
 ```
 
 Sample response:
@@ -96,7 +96,7 @@ Create a new user
 
 ```
 curl -X POST \
-  http://0.0.0.0:8080/users \
+  https://blog03-api.herokuapp.com/users \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -114,7 +114,7 @@ Create a new post
 
 ```
 curl -X POST \
-  http://0.0.0.0:8080/posts \
+  https://blog03-api.herokuapp.com/posts \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -134,7 +134,7 @@ Update post
 
 ```
 curl -X PATCH \
-  http://0.0.0.0:8080/posts/2 \
+  https://blog03-api.herokuapp.com/posts/2 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -153,7 +153,7 @@ Delete a given post
 
 ```
 curl -X DELETE \
-  http://0.0.0.0:8080/posts/4 \
+  https://blog03-api.herokuapp.com/posts/4 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN> ' \
 
 ```
@@ -171,7 +171,7 @@ The following section explains how to set up and run the project locally.
 
 ### Installing Dependencies
 
-The project requires Python 3.6. Using a virtual environment such as `pipenv` is recommended. Set up the project as follows:
+The project requires Python 3.8. Using a virtual environment such as `pipenv` is recommended. Set up the project as follows:
 
 ```
 
@@ -182,12 +182,12 @@ pipenv install
 
 ### Database Setup
 
-With Postgres running, create a database:
 
+With Postgres running, create a database and import data using the blog_api.psql file provided. In terminal run:
 ```
 
 sudo -u postgres createdb blog_api
-
+psql blog_api < blog_api.psql
 ```
 
 ### Running the server
@@ -205,6 +205,7 @@ python manage.py runserver
 To test the API, first create a test database in postgres and then execute the tests as follows:
 
 ```
-sudo -u postgres createdb blog_api_test
+sudo -u postgres createdb api_testing
+psql api_testing < test_blog_api.psql
 python test_app.py
 ```
