@@ -1,0 +1,576 @@
+{
+	"id": "b714f01d-d26f-49b6-aa95-6954d8676f6d",
+	"name": "Blog API",
+	"timestamp": "2021-11-18T12:18:21.261Z",
+	"collection_id": "17855005-b440b958-34f1-4b4a-941b-745e7a01827f",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 18,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7bd6b54f-fb8b-4690-b9b4-2677551e6aea",
+			"name": "posts",
+			"url": "http://0.0.0.0:8080/posts",
+			"time": 790,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				790
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6e5f2c30-7879-492e-9da4-eaeb6e66c5ef",
+			"name": "posts - error test",
+			"url": "http://0.0.0.0:8080/posts",
+			"time": 486,
+			"responseCode": {
+				"code": 422,
+				"name": "UNPROCESSABLE ENTITY"
+			},
+			"tests": {
+				"Status code is 422": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				486
+			],
+			"allTests": [
+				{
+					"Status code is 422": true
+				}
+			]
+		},
+		{
+			"id": "68172924-c44a-42e9-b3d6-860b5a07bde6",
+			"name": "patch",
+			"url": "http://0.0.0.0:8080/posts/8",
+			"time": 500,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				500
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "dc1c72be-4c81-4374-bee0-4c25cad068a5",
+			"name": "patch - error test",
+			"url": "http://0.0.0.0:8080/posts/70000",
+			"time": 424,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				424
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "bf602a11-7493-499c-a81f-7ef9d3f7ed9d",
+			"name": "posts",
+			"url": "http://0.0.0.0:8080/posts/8",
+			"time": 629,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				629
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "0a752739-a028-4f88-8847-bacbfab948aa",
+			"name": "delete - error test",
+			"url": "http://0.0.0.0:8080/posts/3000",
+			"time": 461,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				461
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "45286f8d-f557-4cf5-9312-4fa0ff0ace94",
+			"name": "users",
+			"url": "http://0.0.0.0:8080/users",
+			"time": 558,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				558
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "256d660d-fc73-439f-a508-6d3d12939959",
+			"name": "users - error test",
+			"url": "http://0.0.0.0:8080/users",
+			"time": 492,
+			"responseCode": {
+				"code": 422,
+				"name": "UNPROCESSABLE ENTITY"
+			},
+			"tests": {
+				"Status code is 422": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				492
+			],
+			"allTests": [
+				{
+					"Status code is 422": true
+				}
+			]
+		},
+		{
+			"id": "1fc0efbe-c78e-4688-9530-00565cfbeb24",
+			"name": "posts - permission error test",
+			"url": "http://0.0.0.0:8080/posts",
+			"time": 390,
+			"responseCode": {
+				"code": 403,
+				"name": "FORBIDDEN"
+			},
+			"tests": {
+				"Status code is 403": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				390
+			],
+			"allTests": [
+				{
+					"Status code is 403": true
+				}
+			]
+		},
+		{
+			"id": "3c384e87-b82d-4fea-aa14-0e0b41972f54",
+			"name": "posts",
+			"url": "http://0.0.0.0:8080/posts/6",
+			"time": 451,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				451
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "096c67c7-687c-40e9-9933-03f4c1cb15c0",
+			"name": "patch - error test",
+			"url": "http://0.0.0.0:8080/posts/1",
+			"time": 444,
+			"responseCode": {
+				"code": 422,
+				"name": "UNPROCESSABLE ENTITY"
+			},
+			"tests": {
+				"Status code is 422. Because there is no body": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422. Because there is no body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				444
+			],
+			"allTests": [
+				{
+					"Status code is 422. Because there is no body": true
+				}
+			]
+		},
+		{
+			"id": "badb7f49-3d39-432e-b57b-604e03a59e6a",
+			"name": "posts - permission error test",
+			"url": "http://0.0.0.0:8080/posts/2",
+			"time": 455,
+			"responseCode": {
+				"code": 403,
+				"name": "FORBIDDEN"
+			},
+			"tests": {
+				"Status code is 403. Permission not found": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403. Permission not found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				455
+			],
+			"allTests": [
+				{
+					"Status code is 403. Permission not found": true
+				}
+			]
+		},
+		{
+			"id": "2a1f11f6-26fe-415b-9c8a-ccc28876967a",
+			"name": "posts",
+			"url": "http://0.0.0.0:8080/posts",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d6e95a33-cfcf-4843-a0be-9bdafc707f9f",
+			"name": "posts/1",
+			"url": "http://0.0.0.0:8080/posts/1",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a4044558-3dd5-4ce3-a8e3-034328d397b2",
+			"name": "posts/1000 - Not Found Error test",
+			"url": "http://0.0.0.0:8080/posts/10000",
+			"time": 21,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "97304d9a-e4fc-4cae-849c-b7da300e9fd4",
+			"name": "users",
+			"url": "http://0.0.0.0:8080/users",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c640175b-5e12-4563-9ed4-f782ee88b789",
+			"name": "users/1",
+			"url": "http://0.0.0.0:8080/users/1",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e13a2e2e-79b2-45d2-9665-edb5adb02338",
+			"name": "users/999 - NotFoundError Testing",
+			"url": "http://0.0.0.0:8080/users/999",
+			"time": 27,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6211,
+	"collection": {
+		"requests": [
+			{
+				"id": "7bd6b54f-fb8b-4690-b9b4-2677551e6aea",
+				"method": "POST"
+			},
+			{
+				"id": "6e5f2c30-7879-492e-9da4-eaeb6e66c5ef",
+				"method": "POST"
+			},
+			{
+				"id": "68172924-c44a-42e9-b3d6-860b5a07bde6",
+				"method": "PATCH"
+			},
+			{
+				"id": "dc1c72be-4c81-4374-bee0-4c25cad068a5",
+				"method": "PATCH"
+			},
+			{
+				"id": "bf602a11-7493-499c-a81f-7ef9d3f7ed9d",
+				"method": "DELETE"
+			},
+			{
+				"id": "0a752739-a028-4f88-8847-bacbfab948aa",
+				"method": "DELETE"
+			},
+			{
+				"id": "45286f8d-f557-4cf5-9312-4fa0ff0ace94",
+				"method": "POST"
+			},
+			{
+				"id": "256d660d-fc73-439f-a508-6d3d12939959",
+				"method": "POST"
+			},
+			{
+				"id": "1fc0efbe-c78e-4688-9530-00565cfbeb24",
+				"method": "POST"
+			},
+			{
+				"id": "3c384e87-b82d-4fea-aa14-0e0b41972f54",
+				"method": "PATCH"
+			},
+			{
+				"id": "096c67c7-687c-40e9-9933-03f4c1cb15c0",
+				"method": "PATCH"
+			},
+			{
+				"id": "badb7f49-3d39-432e-b57b-604e03a59e6a",
+				"method": "DELETE"
+			},
+			{
+				"id": "2a1f11f6-26fe-415b-9c8a-ccc28876967a",
+				"method": "GET"
+			},
+			{
+				"id": "d6e95a33-cfcf-4843-a0be-9bdafc707f9f",
+				"method": "GET"
+			},
+			{
+				"id": "a4044558-3dd5-4ce3-a8e3-034328d397b2",
+				"method": "GET"
+			},
+			{
+				"id": "97304d9a-e4fc-4cae-849c-b7da300e9fd4",
+				"method": "GET"
+			},
+			{
+				"id": "c640175b-5e12-4563-9ed4-f782ee88b789",
+				"method": "GET"
+			},
+			{
+				"id": "e13a2e2e-79b2-45d2-9665-edb5adb02338",
+				"method": "GET"
+			}
+		]
+	}
+}

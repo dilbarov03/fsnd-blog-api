@@ -1,0 +1,105 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.9 (Ubuntu 12.9-0ubuntu0.20.04.1)
+-- Dumped by pg_dump version 12.9 (Ubuntu 12.9-0ubuntu0.20.04.1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: posts; Type: TABLE; Schema: public; Owner: oktamjon
+--
+
+CREATE TABLE public.posts (
+    id bigint NOT NULL,
+    title text,
+    body text,
+    author bigint
+);
+
+
+ALTER TABLE public.posts OWNER TO oktamjon;
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: oktamjon
+--
+
+CREATE TABLE public.users (
+    id bigint NOT NULL,
+    full_name text
+);
+
+
+ALTER TABLE public.users OWNER TO oktamjon;
+
+--
+-- Data for Name: posts; Type: TABLE DATA; Schema: public; Owner: oktamjon
+--
+
+COPY public.posts (id, title, body, author) FROM stdin;
+1	Representing Rational Numbers With Python Fractions	The fractions module in Python is arguably one of the most underused elements of the standard library. Even though it may not be well-known, it’s a useful tool to have under your belt because it can help address the shortcomings of floating-point arithmetic in binary. That’s essential if you plan to work with financial data or if you require infinite precision for your calculations.	1
+2	Securely Deploy a Django App With Gunicorn, Nginx, & HTTPS	Taking a Django app from development to production is a demanding but rewarding process. This tutorial will take you through that process step by step, providing an in-depth guide that starts at square one with a no-frills Django application and adds in Gunicorn, Nginx, domain registration, and security-focused HTTP headers. After going over this tutorial, you’ll be better equipped to take your Django app into production and serve it to the world	1
+3	Advanced Visual Studio Code for Python Developers	Visual Studio Code, or VS Code for short, is a free and open source code editor by Microsoft. You can use VS Code as a lightweight code editor to make quick changes, or you can configure it as an integrated development environment (IDE) through the use of third-party extensions. In this tutorial, you’re going to look at how to get the most out of VS Code for Python development.	2
+4	Build a Command-Line To-Do App With Python and Typer	Building an application to manage your to-do list can be an interesting project when you’re learning a new programming language or trying to take your skills to the next level. In this tutorial, you’ll build a functional to-do application for the command line using Python and Typer, which is a relatively young library for creating powerful command-line interface (CLI) applications in almost no time.	2
+6	Representing Rational Numbers With Python Fractions	The fractions module in Python is arguably one of the most underused elements of the standard library. Even though it may not be well-known, it’s a useful tool to have under your belt because it can help address the shortcomings of floating-point arithmetic in binary. That’s essential if you plan to work with financial data or if you require infinite precision for your calculations.	1
+7	Python's zipapp: Build Executable Zip Applications	A Python Zip application is a quick and cool option for you to bundle and distribute an executable application in a single ready-to-run file, which will make your end users’ experience more pleasant. If you want to learn about Python applications and how to create them using zipapp from the standard library, then this tutorial is for you.	3
+9	This is new post	This is new body	3
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: oktamjon
+--
+
+COPY public.users (id, full_name) FROM stdin;
+1	Thomas Party
+2	Dilbarov Uktamjon
+3	Andrew Simson
+4	Anthony May
+5	Anthony May
+6	Anthony May
+\.
+
+
+--
+-- Name: users idx_57596_users_pkey; Type: CONSTRAINT; Schema: public; Owner: oktamjon
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT idx_57596_users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: posts idx_57602_posts_pkey; Type: CONSTRAINT; Schema: public; Owner: oktamjon
+--
+
+ALTER TABLE ONLY public.posts
+    ADD CONSTRAINT idx_57602_posts_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: posts posts_author_fkey; Type: FK CONSTRAINT; Schema: public; Owner: oktamjon
+--
+
+ALTER TABLE ONLY public.posts
+    ADD CONSTRAINT posts_author_fkey FOREIGN KEY (author) REFERENCES public.users(id);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
